@@ -16,9 +16,24 @@
             font-size: 3rem;
             font-family: "Courier New", monospace;
         }
+        #text {
+            display: none;
+            filter: blur(10px);
+            opacity: 0;
+            transition: opacity 3s ease-in;
+        }
     </style>
+    <script>
+        setTimeout(() => {
+            const textElement = document.getElementById('text');
+            textElement.style.display = 'block';
+            setTimeout(() => {
+                textElement.style.opacity = '1';
+            }, 10);
+        }, 27000);
+    </script>
 </head>
 <body>
-    <div>Existence</div>
+    <div id="text">Existence</div>
 </body>
 </html>
